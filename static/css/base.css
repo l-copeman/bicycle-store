@@ -1,20 +1,83 @@
-html {
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+html, body {
     height: 100%;
 }
 
 body {
-    background-color: aqua; 
+    display: flex;
+    flex-direction: column;
+    background: url('/media/homepage-image4.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
-    color: #de1212;
-    font-family: 'Lato';
+    font-family: 'Rubik';
     
 }
 
 header {
-    background-color: rgb(0, 255, 60);
+    background-color: rgb(28, 102, 28);
+    color: #ffffff
 }
 
-h2 {
-    text-transform: uppercase;
+main {
+    flex: 1;
+    min-height: 100vh;
+}
+
+.shop-now {
+    background-color: rgb(28, 102, 28);
+    width: fit-content;
+    border: 2px solid rgb(251, 251, 42);
+    padding: 0px;
+}
+
+.shop-now:hover {
+    text-decoration: underline;
+}
+
+.btn-style {
+    border: 3px solid rgb(251, 251, 42);
+    color: rgb(255, 255, 255);
+    min-width: 62px;
+    min-height: 62px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.brand:hover {
+    color: rgb(251, 251, 42);
+    text-decoration: underline;
+}
+
+.btn-style:hover {
+    color:rgb(251, 251, 42);
+}
+
+.input-height {
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 40px;
+}
+
+.custom-top {
+    position: relative;
+    top: 10vh;
+}
+
+/* Footer */
+footer {
+    bottom: 0;
+    background-color: rgb(28, 102, 28);
+    color: #ffffff;
+}
+
+.hr-footer {
+    border: none;
+    background-color:rgb(251, 251, 42);
+    height: 20px;
+}
+
+.bottom {
+    margin-top: auto;
+    width: 100%;
 }
