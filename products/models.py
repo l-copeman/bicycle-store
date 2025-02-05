@@ -3,6 +3,10 @@ from cloudinary.models import CloudinaryField
 
 class Category(models.Model):
     """Recipe model"""
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=250)
 
     def __str__(self):
@@ -10,8 +14,8 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey('Category', blank=False, null=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=250, blank=False, null=False)
-    name = models.CharField(max_length=250, blank=False, null=False)
+    sku = models.CharField(max_length=250, unique=True, blank=False, null=False)
+    name = models.CharField(max_length=250, unique=True, blank=False, null=False)
     image = CloudinaryField('image', default='placeholder')
     description = models.TextField(max_length=3000, blank=False, null=False)
     colour = models.CharField(max_length=30, blank=False, null=False)
