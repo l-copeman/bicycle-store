@@ -1,11 +1,61 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+<div class="row product-nav">
+    <nav class="w-100 navbar-nav">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-success btn-products" aria-current="page" href="#">All Bikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-success btn-products" href="#">Road Bikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-success btn-products" href="#">Mount Bikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-success btn-products" href="#">Kids Bikes</a>
+            </li>
+          </ul>
+    </nav>
+</div>
+{% endblock %}
+
 {% block content %}
-<div class="container">
+<div class="overlay"></div>
+<div class="container-fluid">
     <div class="row">
-        <div class="col">
-            {{ products }}
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Products</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card mt-3">
+                        {% if "placeholder" in product.image.url %}
+                        <img class="card-img-top pt-2 pl-2 pr-2" src="/media/placeholder.png" alt="{{ product.title }}">
+                        {% else %}
+                        <img class="card-img-top" src=" {{ product.image }}" alt="{{ product.title }}">
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="mb-0 text-left">£{{ product.price }}</p>
+                                    <p class="mb-0 text-end font-weight-bold"><i class="fa-solid fa-layer-group"></i>{{ product.category }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

@@ -16,7 +16,8 @@ body {
 
 header {
     background-color: rgb(28, 102, 28);
-    color: #ffffff
+    color: #ffffff;
+    border: 0;
 }
 
 main {
@@ -42,6 +43,19 @@ main {
     min-height: 62px;
     margin-top: 10px;
     font-size: 15px;
+    border-radius: 0;
+}
+
+.btn-products {
+    border: 2px solid rgb(251, 251, 42);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 5px !important;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 0;
+
 }
 
 .brand:hover {
@@ -49,6 +63,7 @@ main {
     text-decoration: underline;
 }
 
+.btn-products:hover,
 .btn-style:hover {
     color:rgb(251, 251, 42);
 }
@@ -57,6 +72,21 @@ main {
     margin-top: 10px;
     margin-right: 10px;
     height: 40px;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-width: 100%;
+    position: fixed;
+    background: rgb(237, 255, 237);
+    z-index: -1;
+    border: 0;
+}
+
+.product-nav {
+    background-color: rgb(28, 102, 28);
 }
 
 .custom-top {

@@ -36,7 +36,7 @@
 </head>
 
 <body>
-  <header class="">
+  <header class="w-100">
     <div class="container">
       <div class="row align-items-center py-2">
         <!-- Logo Section -->
@@ -123,12 +123,14 @@
     </div>
   </header>
 
+  {% block page_header %}
+  {% endblock %}
+
   {% if messages %}
   <div class="message-container"></div>
   {% endif %}
 
-  {% block page_header %}
-  {% endblock %}
+
 
   <main>
   {% block content %}
