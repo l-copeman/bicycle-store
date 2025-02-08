@@ -6,17 +6,16 @@
     <nav class="w-100 navbar-nav">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link btn btn-outline-success btn-products" aria-current="page"
-                    href="{% url 'products' %}">All Bikes</a>
+                <a href="{% url 'products' %}?category=Road,Mountain,Kids" class="nav-link btn btn-outline-success btn-products" aria-current="page">All Bikes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-outline-success btn-products" href="#">Road Bikes</a>
+                <a href="{% url 'products' %}?category=Road" class="nav-link btn btn-outline-success btn-products">Road Bikes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-outline-success btn-products" href="#">Mount Bikes</a>
+                <a href="{% url 'products' %}?category=Mountain" class="nav-link btn btn-outline-success btn-products">Mount Bikes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-outline-success btn-products" href="#">Kids Bikes</a>
+                <a href="{% url 'products' %}?category=Kids" class="nav-link btn btn-outline-success btn-products">Kids Bikes</a>
             </li>
         </ul>
     </nav>

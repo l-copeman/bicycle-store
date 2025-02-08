@@ -46,6 +46,16 @@ main {
     border-radius: 0;
 }
 
+.btn-search {
+    border: 3px solid rgb(251, 251, 42);
+    color: rgb(0, 0, 0);
+    min-width: 62px;
+    min-height: 62px;
+    margin-top: 10px;
+    font-size: 15px;
+    border-radius: 0;
+}
+
 .btn-products {
     border: 2px solid rgb(251, 251, 42);
     color: rgb(255, 255, 255);
@@ -72,10 +82,6 @@ main {
     margin-top: 10px;
     margin-right: 10px;
     height: 40px;
-}
-
-.form-control {
-    color: rgb(0, 0, 0);
 }
 
 .overlay {
