@@ -45,9 +45,9 @@
         </div>
         <!-- Search Bar Section -->
         <div class="col-md-4 d-none d-md-block">
-          <form method="GET" action="">
+          <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
-              <input class="form-control btn-style rounded-0" type="text" name="q"
+              <input class="form-control btn-style rounded-0" type="text" name="search"
                 placeholder="Search our site">
               <div class="input-group-append">
                 <button class="form-control btn btn-style rounded-0" type="submit">
@@ -105,9 +105,9 @@
 
         <!-- Collapsible Search Bar for Small Screens -->
         <div class="collapse mt-2 d-md-none" id="searchCollapse">
-          <form method="GET" action="">
+          <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
-              <input class="form-control input-height" type="text" name="q"
+              <input class="form-control input-height" type="text" name="search"
                 placeholder="Search our site">
               <div class="input-group-append">
                 <button class="form-control btn btn-style" type="submit">

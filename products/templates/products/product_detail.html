@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="row product-nav">
+    <nav class="w-100 navbar-nav">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link btn btn-outline-success btn-products" aria-current="page"
+                    href="{% url 'products' %}">All Bikes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-outline-success btn-products" href="#">Road Bikes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-outline-success btn-products" href="#">Mount Bikes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-outline-success btn-products" href="#">Kids Bikes</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="">{{ product.name }}</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 col-md-5">
+            <div class="image-container">
+                {% if "placeholder" in product.image.url %}
+                <img class="card-img-top pt-2 pl-2 pr-2" src="/media/placeholder.png" alt="{{ product.title }}">
+                {% else %}
+                <a href="{{ product.image.url }}" target="_blank"
+                    aria-label="Image for {{ product.title }}, opens in new window">
+                    <img class="card-img-top" src="{{ product.image }}" alt="{{ product.title }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-7">
+            <div class="product-details-container mt-3">
+                <hr>
+                <p>{{ product.description }}</p>
+                <hr>
+                <p><span class="font-weight-bold">Colour:</span> {{ product.colour }}</p>
+                <p><span class="font-weight-bold">Rating:</span> {{ product.rating }}</p>
+                <p class="fs-3"><span class="font-weight-bold">Price:</span> £{{ product.price }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

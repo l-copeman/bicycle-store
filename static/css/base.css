@@ -74,6 +74,10 @@ main {
     height: 40px;
 }
 
+.form-control {
+    color: rgb(0, 0, 0);
+}
+
 .overlay {
     top: 0;
     left: 0;
@@ -87,6 +91,11 @@ main {
 
 .product-nav {
     background-color: rgb(28, 102, 28);
+}
+
+.product-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 .custom-top {
