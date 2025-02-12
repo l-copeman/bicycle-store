@@ -37,7 +37,7 @@ main {
 }
 
 .btn-style {
-    border: 3px solid rgb(251, 251, 42);
+    border: 2px solid rgb(251, 251, 42);
     color: rgb(255, 255, 255);
     min-width: 62px;
     min-height: 62px;
@@ -47,7 +47,7 @@ main {
 }
 
 .btn-search {
-    border: 3px solid rgb(251, 251, 42);
+    border: 2px solid rgb(251, 251, 42);
     color: rgb(0, 0, 0);
     min-width: 62px;
     min-height: 62px;

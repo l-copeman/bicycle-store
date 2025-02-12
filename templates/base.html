@@ -47,8 +47,7 @@
         <div class="col-md-4 d-none d-md-block">
           <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
-              <input class="form-control btn-search rounded-0" type="text" name="search"
-                placeholder="Search our site">
+              <input class="form-control btn-search rounded-0" type="text" name="search" placeholder="Search our site">
               <div class="input-group-append">
                 <button class="form-control btn btn-style rounded-0" type="submit">
                   <span class="icon">
@@ -62,16 +61,21 @@
         <!-- Search Button and Account Dropdown -->
         <div class="col-6 col-md-4 text-end">
           <!-- Search Button for Small Screens -->
-          <button class="btn btn-outline-success btn-style d-inline d-md-none me-2" type="button" data-bs-toggle="collapse"
-            data-bs-target="#searchCollapse" aria-expanded="false" aria-controls="searchCollapse">
+          <button class="btn btn-outline-success btn-style d-inline d-md-none me-2" type="button"
+            data-bs-toggle="collapse" data-bs-target="#searchCollapse" aria-expanded="false"
+            aria-controls="searchCollapse">
             <i class="fas fa-search"></i>
           </button>
           <!-- Account Dropdown -->
           <div class="dropdown d-inline">
-            <button class="btn btn-outline-success btn-style dropdown" type="button" id="accountDropdown" data-bs-toggle="dropdown"
-              aria-expanded="false">
+            <button class="btn btn-outline-success btn-style dropdown" type="button" id="accountDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
               <div><i class="fa-regular fa-user"></i></div>
+              {% if user.is_authenticated %}
+              <p class="my-0">{{ user }}</p>
+              {% else %}
               <p class="my-0">Account</p>
+              {% endif %}
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
               {% if request.user.is_authenticated %}
@@ -133,8 +137,8 @@
 
 
   <main>
-  {% block content %}
-  {% endblock %}
+    {% block content %}
+    {% endblock %}
   </main>
 
   <footer class="bottom">
