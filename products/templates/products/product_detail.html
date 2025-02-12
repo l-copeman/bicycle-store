@@ -50,7 +50,7 @@
                 <hr>
                 <p><strong>Colour:</strong> {{ product.colour }}</p>
                 <p><strong>Rating:</strong> {{ product.rating }}</p>
-                <p class="fs-3"><strong>Price:</strong> £{{ product.price }}</p>
+                <p><strong>Price:</strong> £{{ product.price }}</p>
             </div>
             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                 {% csrf_token %}
