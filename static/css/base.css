@@ -109,6 +109,11 @@ main {
     top: 10vh;
 }
 
+.zoom:hover {
+    color: rgb(251, 251, 42);
+    transform: scale(1.5);
+}
+
 /* Footer */
 footer {
     bottom: 0;

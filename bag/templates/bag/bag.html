@@ -31,7 +31,7 @@
                             <img class="img-fluid rounded d-block d-md-none" src="{{ item.product.image.url }}">
                         </td>
                         <td class="py-3">
-                            <form class="bag_form" action="" method="POST">
+                            <form class="bag-form" action="{% url 'update_bag' item.item_id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group shop-now">
@@ -50,8 +50,8 @@
                             </form>
                         </td>
                         <td class="py-3 text-center">
-                            <a class="update-button text-success"><i class="fa-solid fa-check me-2"></i></a>
-                            <a class="remove-button text-danger" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can ms-2"></i></a>
+                            <a class="update-button text-success zoom"><i class="fa-solid fa-check me-2"></i></a>
+                            <a class="remove-button text-danger zoom" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can ms-2"></i></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">£{{ item.product.price }}</p>
@@ -101,13 +101,13 @@
 {% include 'products/includes/quantity_button.html' %}
 
 <script type="text/javascript">
-    // Update quantity on click
+    // Update quantity
     $('.update-button').click(function(e) {
-        var form = $(this).prev('.bag_form');
+        var form = $(this).closest("tr").find('.bag-form');
         form.submit();
     })
 
-    // Remove item and reload on click
+    // Remove item from bag
     $('.remove-button').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
@@ -119,6 +119,7 @@
              location.reload();
          });
     })
+
 </script>
 
 {% endblock %}
