@@ -109,9 +109,20 @@ main {
     top: 10vh;
 }
 
-.zoom:hover {
-    color: rgb(251, 251, 42);
-    transform: scale(1.5);
+.message-container {
+    z-index: 99999999;
+    position: fixed;
+    top: 150px;
+    right: 60px;
+}
+
+.message-banner {
+    height: 15px;
+    width: 100%;
+}
+
+.message-bg {
+    background: rgb(188, 229, 188);
 }
 
 /* Footer */
