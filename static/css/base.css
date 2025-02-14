@@ -109,6 +109,11 @@ main {
     top: 10vh;
 }
 
+.remove-button i:hover,
+.update-button i:hover {
+    transform: scale(1.3);
+}
+
 .message-container {
     z-index: 99999999;
     position: fixed;

@@ -52,7 +52,7 @@
                         </td>
                         <td class="py-3 text-center">
                             <a class="update-button text-success"><i class="fa-solid fa-check me-2"></i></a>
-                            <a class="remove-button text-danger" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can ms-2"></i></a>
+                            <a class="remove-button text-danger" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can ms-3"></i></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -85,7 +85,7 @@
                 </table>
             </div>
             {% else %}
-            <p class="lead mt-3 mb-5">Oh no! Your basket is empty. Time to go shopping!</p>
+            <p class="lead mt-3 mb-5">Oh no! Your bag is empty. Time to go shopping!</p>
             <p class="fst-italic">Standard delivery £15</p>
             <p class="fst-italic">Free delivery when you spend £500</p>
             <a href="{% url 'products' %}" class="btn shop-now rounded-0 btn-lg text-white mt-3 p-3">
