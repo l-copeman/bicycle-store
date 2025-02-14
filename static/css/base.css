@@ -114,6 +114,9 @@ main {
     position: fixed;
     top: 150px;
     right: 60px;
+    border: 1px solid rgb(251, 251, 42);
+    padding: 0;
+
 }
 
 .message-banner {
