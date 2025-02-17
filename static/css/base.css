@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     background: url('/media/homepage-image4.jpg') no-repeat center center fixed;
     background-size: cover;
+    height: 100vh;
     font-family: 'Rubik';
     
 }
@@ -20,10 +21,14 @@ header {
     border: 0;
 }
 
-main {
+.content {
+    flex: 1;
+}
+
+/* main {
     flex: 1;
     min-height: 100vh;
-}
+} */
 
 .shop-now {
     background-color: rgb(28, 102, 28);

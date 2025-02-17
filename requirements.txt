@@ -1,8 +1,10 @@
 asgiref==3.8.1
 cloudinary==1.36.0
+crispy-bootstrap5==2024.10
 dj3-cloudinary-storage==0.0.6
-Django==3.2.25
+Django==5.1.6
 django-allauth==0.55.0
+django-crispy-forms==2.3
 oauthlib==3.2.2
 PyJWT==2.10.1
 python3-openid==3.2.0

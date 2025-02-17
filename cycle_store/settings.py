@@ -26,6 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-v6wuhjbefdexuczq@5ka9n#nwh*)t(#v9%2o=7p3wb%7-mj&pa'
 
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -52,6 +54,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'bag',
     'checkout',
+    'crispy_forms',
+    'crispy_bootstrap5'
 ]
 
 MIDDLEWARE = [
@@ -65,6 +69,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'cycle_store.urls'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 TEMPLATES = [
     {
@@ -80,8 +87,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
+             'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
@@ -173,3 +185,7 @@ cloudinary.config(secure=True,)
 
 FREE_DELIVERY_THRESHOLD = 500
 STANDARD_DELIVERY = 15
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-lcopeman-bicyclestore-z5n1srfsc2x.ws-eu117.gitpod.io",
+]
