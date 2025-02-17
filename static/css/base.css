@@ -25,11 +25,6 @@ header {
     flex: 1;
 }
 
-/* main {
-    flex: 1;
-    min-height: 100vh;
-} */
-
 .shop-now {
     background-color: rgb(28, 102, 28);
     width: fit-content;
@@ -143,6 +138,8 @@ footer {
     bottom: 0;
     background-color: rgb(28, 102, 28);
     color: #ffffff;
+    margin-top: auto;
+    width: 100%;
 }
 
 .hr-footer {
@@ -155,3 +152,11 @@ footer {
     margin-top: auto;
     width: 100%;
 }
+
+/* Mailchimp
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+    } */
