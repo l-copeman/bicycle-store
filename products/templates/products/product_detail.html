@@ -42,7 +42,7 @@
                 {% else %}
                 <a href="{{ product.image.url }}" target="_blank"
                     aria-label="Image for {{ product.title }}, opens in new window">
-                    <img class="card-img-top" src="{{ product.image }}" alt="{{ product.title }}">
+                    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.title }}">
                 </a>
                 {% endif %}
             </div>
