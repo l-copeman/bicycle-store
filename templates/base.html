@@ -87,7 +87,7 @@
                 <a href="" class="dropdown-item">Product Management</a>
               </li>
               {% endif %}
-              <li><a href="" class="dropdown-item">My Profile</a></li>
+              <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
               <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
               {% else %}
               <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
@@ -158,7 +158,7 @@
     {% endblock %}
   </main>
 
-  <footer class="bottom">
+  <footer class="bottom mt-5">
     <h3>Stay in touch</h3>
     <hr class="hr-footer">
     <div class="row me-0">
