@@ -133,6 +133,16 @@ header {
     background: rgb(188, 229, 188);
 }
 
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #7e8993 !important;
+}
+
 /* Footer */
 footer {
     bottom: 0;

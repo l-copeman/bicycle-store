@@ -4,7 +4,7 @@ crispy-bootstrap5==2024.10
 dj3-cloudinary-storage==0.0.6
 Django==5.1.6
 django-allauth==0.55.0
-django-countries==7.2.1
+django-countries==7.6.1
 django-crispy-forms==2.3
 oauthlib==3.2.2
 PyJWT==2.10.1
