@@ -133,17 +133,6 @@ header {
     background: rgb(188, 229, 188);
 }
 
-/* Checkout form */
-select,
-select option {
-    color: #000000;
-}
-
-select:invalid,
-select option[value=""] {
-    color: #7e8993 !important;
-}
-
 /* Profile form */
 #id_default_country,
 #id_default_country option:not(:first-child) {
