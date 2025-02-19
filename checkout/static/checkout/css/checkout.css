@@ -36,4 +36,23 @@ select option {
 select:invalid,
 select option[value=""] {
     color: #7e8993 !important;
-} 
+}
+
+#loading-overlay {
+	display: none;
+	position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(148, 246, 162);
+  z-index: 9999;
+}
+
+.loading-spinner {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+}
