@@ -50,8 +50,8 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         including any delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
-        if self.order_total > 0 and self.order_total > settings.FREE_DELIVERY_THRESHOLD:
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        if self.order_total > 0 and self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = settings.STANDARD_DELIVERY
         else:
             self.delivery_cost = 0
@@ -64,7 +64,7 @@ class Order(models.Model):
         if it hasn't been set already.
         """
         if not self.order_number:
-            self.order_number = self._generate_order_number()
+            self.order_number = self._order_number()
         super().save(*args, **kwargs)
 
     def __str__(self):
