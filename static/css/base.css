@@ -84,6 +84,10 @@ header {
     height: 40px;
 }
 
+.text-black {
+    color:rgb(0, 0, 0) !important;
+}
+
 .overlay {
     top: 0;
     left: 0;
@@ -149,6 +153,7 @@ header {
 
 #profile-update-form div {
     border: 1px solid rgb(251, 251, 42);
+    color: #000;
 }
 
 /* Footer */
