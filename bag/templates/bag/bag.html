@@ -28,8 +28,15 @@
                     {% for item in bag_items %}
                     <tr>
                         <td class="py-3">
-                            <p class="my-0 d-none d-md-block"><strong>{{ item.product.name }}</strong><br><span class="small">{{ item.product.price }}/each</span></p>
-                            <img class="img-fluid rounded d-block d-md-none" src="{{ item.product.image.url }}">
+                            <p class="my-0 d-none d-md-block"><strong>{{ item.product.name }}</strong><br><span
+                                    class="small">{{ item.product.price }}/each</span></p>
+                            {% if "placeholder" in product.image.url %}
+                            <img class="img-fluid rounded d-block d-md-none" src="/media/placeholder.png"
+                                alt="{{ product.title }}">
+                            {% else %}
+                            <img class="img-fluid rounded d-block d-md-none" src="{{ item.product.image.url }}"
+                                alt="{{ product.title }}">
+                            {% endif %}
                         </td>
                         <td class="py-3">
                             <form class="bag-form" action="{% url 'update_bag' item.item_id %}" method="POST">
@@ -40,8 +47,9 @@
                                             data-item_id="{{ item.item_id }}" id="decrease_qty{{ item.item_id }}">
                                             <i class="fas fa-minus fa-sm"></i>
                                         </button>
-                                        <input class="form-control form-control-sm product-qty" type="number" name="quantity" value="{{ item.quantity }}"
-                                            min="1" max="99" data-item_id="{{ item.item_id }}" id="qty{{ item.item_id }}">
+                                        <input class="form-control form-control-sm product-qty" type="number"
+                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                            data-item_id="{{ item.item_id }}" id="qty{{ item.item_id }}">
                                         <button class="increase-qty btn btn-sm text-white rounded-0"
                                             data-item_id="{{ item.item_id }}" id="increase_qty{{ item.item_id }}">
                                             <i class="fas fa-plus fa-sm"></i>
@@ -52,13 +60,14 @@
                         </td>
                         <td class="py-3 text-center">
                             <a class="update-button text-success"><i class="fa-solid fa-check me-2"></i></a>
-                            <a class="remove-button text-danger" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can ms-3"></i></a>
+                            <a class="remove-button text-danger" id="remove_{{ item.item_id }}"><i
+                                    class="fa-solid fa-trash-can ms-3"></i></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
-                    
+
                     {% endfor %}
                     <tr class="text-end">
                         <td colspan="5" class="pt-5 text-right">
@@ -74,7 +83,8 @@
                             <a href="{% url 'products' %}" class="btn btn-lg shop-now text-white rounded-0 p-2 mb-2">
                                 <span class="text-uppercase">Continue Shopping</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-lg shop-now text-white rounded-0 p-2 mb-2 ms-2">
+                            <a href="{% url 'checkout' %}"
+                                class="btn btn-lg shop-now text-white rounded-0 p-2 mb-2 ms-2">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
@@ -103,24 +113,25 @@
 
 <script type="text/javascript">
     // Update quantity
-    $('.update-button').click(function(e) {
+    $('.update-button').click(function (e) {
         var form = $(this).closest("tr").find('.bag-form');
         form.submit();
     })
 
     // Remove item from bag
-    $('.remove-button').click(function(e) {
+    $('.remove-button').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/bag/delete/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
 
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     })
-
 </script>
 
 {% endblock %}
