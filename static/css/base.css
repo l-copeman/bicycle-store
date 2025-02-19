@@ -133,6 +133,10 @@ header {
     background: rgb(188, 229, 188);
 }
 
+.custom-border {
+    border: 3px solid rgb(251, 251, 42);
+}
+
 /* Profile form */
 #id_default_country,
 #id_default_country option:not(:first-child) {
