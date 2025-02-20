@@ -31,10 +31,10 @@
                             <p class="my-0 d-none d-md-block"><strong>{{ item.product.name }}</strong><br><span
                                     class="small">{{ item.product.price }}/each</span></p>
                             {% if "placeholder" in product.image.url %}
-                            <img class="img-fluid rounded d-block d-md-none" src="/media/placeholder.png"
+                            <img class="img-fluid d-block d-md-none bag-image my-0" src="/media/placeholder.png"
                                 alt="{{ product.title }}">
                             {% else %}
-                            <img class="img-fluid rounded d-block d-md-none" src="{{ item.product.image.url }}"
+                            <img class="img-fluid d-block d-md-none bag-image my-0" src="{{ item.product.image.url }}"
                                 alt="{{ product.title }}">
                             {% endif %}
                         </td>

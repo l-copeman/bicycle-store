@@ -33,7 +33,7 @@
                         {% if item.product.image %}
                         <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                         {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <img class="w-100" src="{{ MEDIA_URL }}placeholder.png" alt="{{ product.name }}">
                         {% endif %}
                     </a>
                 </div>
@@ -118,7 +118,7 @@
                             <span class="icon">
                                 <i class="fas fa-exclamation-circle"></i>
                             </span>
-                            <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                            <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
                         </p>
                     </div>
                 </form>

@@ -141,6 +141,12 @@ header {
     border: 3px solid rgb(251, 251, 42);
 }
 
+.bag-image {
+    max-width: 100px;
+    max-height: 100px;
+    padding: 0;
+}
+
 /* Profile form */
 #id_default_country,
 #id_default_country option:not(:first-child) {
