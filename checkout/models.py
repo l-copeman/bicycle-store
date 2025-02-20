@@ -11,6 +11,7 @@ from profiles.models import Profile
 
 
 class Order(models.Model):
+    """"Order" model"""
     class OrderStatus(models.TextChoices):
         PENDING = 'PENDING', 'Pending'
         PAID = 'PAID', 'Paid'
@@ -71,6 +72,7 @@ class Order(models.Model):
         return self.order_number    
 
 class OrderLineItem(models.Model):
+    """ Model for each line of the order"""
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)

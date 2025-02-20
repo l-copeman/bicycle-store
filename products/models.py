@@ -2,7 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 class Category(models.Model):
-    """Recipe model"""
+    """Category model"""
 
     class Meta:
         verbose_name_plural = 'Categories'
@@ -13,6 +13,7 @@ class Category(models.Model):
         return self.name
 
 class Product(models.Model):
+    """Product model"""
     category = models.ForeignKey('Category', blank=False, null=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=250, unique=True, blank=False, null=False)
     name = models.CharField(max_length=250, unique=True, blank=False, null=False)
