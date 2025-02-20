@@ -53,6 +53,12 @@
                                         <p class="mb-0 text-left">£{{ product.price }}</p>
                                         <p class="mb-0 text-end font-weight-bold"><i
                                                 class="fa-solid fa-layer-group"></i>{{ product.category }}</p>
+                                        {% if request.user.is_superuser %}
+                                            <small class="ml-3">
+                                            <a href="{% url 'edit_product' product.id %}" class="shop-now text-white text-uppercase p-1">Edit</a> | 
+                                            <a class="text-danger danger text-uppercase p-1" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </small>
+                                        {% endif %}        
                                     </div>
                                 </div>
                             </div>
