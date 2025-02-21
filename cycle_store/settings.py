@@ -28,7 +28,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-lcopeman-bicyclestore-z5n1srfsc2x.ws-eu117.gitpod.io']
+ALLOWED_HOSTS = [
+    '8000-lcopeman-bicyclestore-z5n1srfsc2x.ws-eu117.gitpod.io',
+    '127.0.0.1',
+    'localhost',
+    ]
 
 
 # Application definition
@@ -187,6 +191,7 @@ STANDARD_DELIVERY = 15
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
 
 CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'https://example.com').split(',')
