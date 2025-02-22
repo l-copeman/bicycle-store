@@ -6,8 +6,7 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         exclude = ('user',)
-           
-        
+
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
@@ -16,8 +15,8 @@ class ProfileForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             'default_phone_number': 'Phone Number',
-            'default_address': 'Street Address',           
-            'default_town_or_city': 'Town or City',  
+            'default_address': 'Street Address',
+            'default_town_or_city': 'Town or City',
             'default_postcode': 'Post Code',
             'default_county': 'County',
         }
@@ -31,4 +30,4 @@ class ProfileForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'rounded-0'
-            self.fields[field].label = False              
+            self.fields[field].label = False

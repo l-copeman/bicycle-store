@@ -16,9 +16,11 @@ def profile(request):
         form = ProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile updated successfully')
+            messages.success(
+                request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed, please ensure form is valid.')
+            messages.error(
+                request, 'Update failed, please ensure form is valid.')
 
     else:
         form = ProfileForm(instance=profile)
@@ -27,8 +29,8 @@ def profile(request):
 
     template = 'profiles/profile.html'
     context = {
-        'form' : form,
-        'orders' : orders,
+        'form': form,
+        'orders': orders,
     }
 
     return render(request, template, context)
