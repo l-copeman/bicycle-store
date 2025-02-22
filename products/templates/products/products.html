@@ -37,15 +37,15 @@
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <a href="{% url 'product_detail' product.id %}" class="product-link">
-                        <div class="card mt-3">
+                        <div class="card mt-3 product-card">
                             {% if "placeholder" in product.image.url %}
                             <img class="card-img-top pt-2 pl-2 pr-2" src="/media/placeholder.png"
                                 alt="{{ product.title }}">
                             {% else %}
-                            <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.title }}">
+                            <img class="card-img-top product-image" src="{{ product.image.url }}" alt="{{ product.title }}">
                             {% endif %}
                             <div class="card-body pb-0">
-                                <p class="mb-0">{{ product.name }}</p>
+                                <p class="mb-0 mt-2 fw-bold">{{ product.name }}</p>
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
@@ -54,7 +54,7 @@
                                         <p class="mb-0 text-end font-weight-bold"><i
                                                 class="fa-solid fa-layer-group"></i>{{ product.category }}</p>
                                         {% if request.user.is_superuser %}
-                                            <small class="ml-3">
+                                            <small class="ml-3 mb-2">
                                             <a href="{% url 'edit_product' product.id %}" class="shop-now text-white text-uppercase p-1">Edit</a> | 
                                             <a class="text-danger danger text-uppercase p-1" href="{% url 'delete_product' product.id %}">Delete</a>
                                             </small>
