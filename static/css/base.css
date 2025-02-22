@@ -8,7 +8,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: url('/media/homepage-image4.jpg') no-repeat center center fixed;
+    background: url('https://res.cloudinary.com/de3tk1vz7/image/upload/v1740234949/homepage-image4_y2bzqq.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     font-family: 'Rubik';
