@@ -53,8 +53,9 @@ def checkout(request):
             return redirect(
                 reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
+            print(order_form.errors)
+            messages.error(request, 'There was an error with your form.\
+                            Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
