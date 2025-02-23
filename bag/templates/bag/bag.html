@@ -67,10 +67,19 @@
                             <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
-
                     {% endfor %}
                     <tr class="text-end">
-                        <td colspan="5" class="pt-5 text-right">
+                        <td colspan="4" class="py-3 text-end">
+                            <a href="{% url 'products' %}" class="btn btn-lg shop-now text-white rounded-0 p-2 mb-2">
+                                <span class="text-uppercase">Continue Shopping</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><hr></td>
+                    </tr>
+                    <tr class="text-end">
+                        <td colspan="4" class="pt-5">
                             <h6><strong>Subtotal: £{{ total|floatformat:2 }}</strong></h6>
                             <p class="fst-italic">Standard delivery £15</p>
                             <p class="fst-italic">Free delivery when you spend £500</p>
@@ -79,10 +88,7 @@
                         </td>
                     </tr>
                     <tr class="text-end">
-                        <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="btn btn-lg shop-now text-white rounded-0 p-2 mb-2">
-                                <span class="text-uppercase">Continue Shopping</span>
-                            </a>
+                        <td colspan="4">
                             <a href="{% url 'checkout' %}"
                                 class="btn btn-lg shop-now text-white rounded-0 p-2 mb-2 ms-2">
                                 <span class="text-uppercase">Secure Checkout</span>

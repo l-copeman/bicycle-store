@@ -44,8 +44,14 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    # Fetch 3 similar products from the same category (excluding the current product)
+    similar_products = Product.objects.filter(
+        category=product.category
+    ).exclude(id=product.id)[:3]
+
     context = {
         'product': product,
+        'similar_products': similar_products,
     }
 
     return render(request, 'products/product_detail.html', context)

@@ -8,7 +8,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: url('/media/homepage-image4.jpg') no-repeat center center fixed;
+    background: url('https://res.cloudinary.com/de3tk1vz7/image/upload/v1740234949/homepage-image4_y2bzqq.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     font-family: 'Rubik';
@@ -31,6 +31,10 @@ header {
     border: 2px solid rgb(251, 251, 42);
     padding: 0px;
     text-decoration: none;
+}
+
+.b-margin {
+    margin-bottom: 500px;
 }
 
 .danger {
@@ -67,7 +71,7 @@ header {
 
 .btn-products {
     border: 2px solid rgb(251, 251, 42);
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
     font-size: 15px;
     padding: 5px !important;
     margin-left: 5px;
@@ -131,7 +135,7 @@ header {
     z-index: 99999999;
     position: fixed;
     top: 150px;
-    right: 60px;
+    right: 20px;
     border: 1px solid rgb(251, 251, 42);
     padding: 0;
 
@@ -155,6 +159,11 @@ header {
     max-height: 100px;
     padding: 0;
 }
+
+/* .admin {
+    position: absolute;
+    bottom: 10px;
+} */
 
 /* Profile form */
 #id_default_country,
@@ -198,3 +207,51 @@ footer {
     font: 14px Helvetica, Arial, sans-serif;
     width: 600px;
     } */
+
+.product-card {
+    border: 3px solid rgb(251, 251, 42); 
+    overflow: hidden;
+    margin: 10px; 
+    padding: 10px;
+    }    
+
+.product-image {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+    
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+/* -------------------------------- Media Queries */
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+    .product-card {
+        width: 225px;
+        height: 310px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.99px) {
+    .product-card {
+        width: 265px;
+        height: 345px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.99px) {
+    .product-card {
+        width: 270px;
+        height: 360px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-card {
+        width: 230px;
+        height: 320px;
+    }
+}
