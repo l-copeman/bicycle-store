@@ -21,7 +21,7 @@ class Order(models.Model):
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(Profile, on_delete=models.SET_NULL,
-                                     null=True, blank=True, 
+                                     null=True, blank=True,
                                      related_name='orders')
     full_name = models.CharField(max_length=100, null=False, blank=False)
     email = models.EmailField(max_length=30, null=False, blank=False)
@@ -77,7 +77,7 @@ class Order(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.order_number    
+        return self.order_number
 
 
 class OrderLineItem(models.Model):

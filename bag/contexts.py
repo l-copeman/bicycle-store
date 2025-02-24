@@ -25,7 +25,7 @@ def bag_contents(request):
     else:
         delivery = 0
 
-    grand_total = total + delivery    
+    grand_total = total + delivery
 
     context = {
         "bag_items": bag_items,
