@@ -121,6 +121,10 @@ header {
     color: rgb(0, 0, 0);
 }
 
+.img-product {
+    max-height: 50%;
+}
+
 .custom-top {
     position: relative;
     top: 10vh;
@@ -224,6 +228,10 @@ footer {
     
 .product-card:hover .product-image {
     transform: scale(1.1);
+}
+
+.mg-card {
+    margin-bottom: 20rem !important;
 }
 
 /* -------------------------------- Media Queries */

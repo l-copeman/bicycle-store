@@ -41,28 +41,30 @@
                             <div class="card-header bg-white pb-0">
                                 <p class="mb-0 mt-2 fw-bold" title="{{ product.name}}">{{ product.name|truncatechars:16 }}</p>
                             </div>
+                            <div class="img-product">
                             {% if "placeholder" in product.image.url %}
                             <img class="card-img p-2 my-2" src="/media/placeholder.png"
                                 alt="{{ product.title }}">
                             {% else %}
                             <img class="card-img product-image my-2 p-2" src="{{ product.image.url }}" alt="{{ product.title }}">
                             {% endif %}
+                            </div>
                             <div class="card-body bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="mb-0 text-left">£{{ product.price }}</p>        
+                                        <p class="mb-2 mt-1 text-left">£{{ product.price }}</p>        
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row mb-2 pb-2">
                                     <div class="col text-center card-footer">
+                                        <p class="mb-2 text-end font-weight-bold"><i
+                                            class="fa-solid fa-layer-group"></i>{{ product.category }}</p>
                                         {% if request.user.is_superuser %}
-                                            <small class="mb-2 mt-2">
+                                        <small class="mb-2 mt-2">
                                             <a href="{% url 'edit_product' product.id %}" class="shop-now text-white text-uppercase p-1">Edit</a> | 
                                             <a class="text-danger danger text-uppercase p-1" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
+                                        </small>
                                         {% endif %}
-                                        <p class="mb-0 text-end font-weight-bold"><i
-                                            class="fa-solid fa-layer-group"></i>{{ product.category }}</p>
                                     </div>
                                 </div>
                             </div>

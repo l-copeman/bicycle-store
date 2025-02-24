@@ -49,9 +49,9 @@
             </div>
         </div>
         <div class="col-12 col-md-7">
-            <div class="product-details-container ms-3 me-3 mt-3">
+            <div class="product-details-container ms-3 me-5 mt-3">
                 <hr>
-                <p>{{ product.description }}</p>
+                <p class="p-2">{{ product.description }}</p>
                 <hr>
                 <p><strong>Colour:</strong> {{ product.colour }}</p>
                 <p><strong>Rating:</strong> {{ product.rating }}</p>
@@ -95,9 +95,19 @@
     </div>
     <div class="container mt-3">
         <hr>
-        <h3 class="text-center mb-4">Similar Products</h3>
-    
-        <div id="similarProductsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <h3 class="text-center mb-3">Similar Products</h3>
+        <div id="similar-products" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel Controls -->
+            <div class="text-center mb-2 ">
+                <button id="carousel-control-prev" class="me-4 shop-now text-white" type="button" data-bs-target="#similar-products" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button id="carousel-control-next" class="ms-4 shop-now text-white" type="button" data-bs-target="#similar-products" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> 
+            </div>
             <div class="carousel-inner">
                 {% for similar_product in similar_products %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
@@ -115,15 +125,14 @@
                 {% endfor %}
             </div>
     
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#similarProductsCarousel" data-bs-slide="prev">
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#similarProductsCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#similarProductsCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+            </button> -->
         </div>
         <hr>
     </div>
