@@ -6,8 +6,8 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import OrderLineItem, Order
-# from profiles.forms import ProfileForm
-# from profiles.models import Profile
+from profiles.forms import ProfileForm
+from profiles.models import Profile
 from products.models import Product
 from bag.contexts import bag_contents
 
@@ -95,23 +95,23 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # if request.user.is_authenticated:
-        #     try:
-        #         profile = Profile.objects.get(user=request.user)
-        #         order_form = OrderForm(initial={
-        #             'full_name': profile.user.get_full_name(),
-        #             'email': profile.user.email,
-        #             'phone_number': profile.default_phone_number,
-        #             'country': profile.default_country,
-        #             'postcode': profile.default_postcode,
-        #             'town_or_city': profile.default_town_or_city,
-        #             'address': profile.default_address,
-        #             'county': profile.default_county,
-        #         })
-        #     except Profile.DoesNotExist:
-        #         order_form = OrderForm()
-        # else:
-        order_form = OrderForm()
+        if request.user.is_authenticated:
+            try:
+                profile = Profile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'address': profile.default_address,
+                    'county': profile.default_county,
+                })
+            except Profile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -136,23 +136,23 @@ def checkout_success(request, order_number):
     order.status = 'PAID'
     order.save()
 
-    # if request.user.is_authenticated:
-        # profile = Profile.objects.get(user=request.user)
-        # order.user_profile = profile
-        # order.save()
+    if request.user.is_authenticated:
+        profile = Profile.objects.get(user=request.user)
+        order.user_profile = profile
+        order.save()
 
-        # if save_info:
-        #     profile_data = {
-        #         'default_phone_number': order.phone_number,
-        #         'default_country': order.country,
-        #         'default_postcode': order.postcode,
-        #         'default_town_or_city': order.town_or_city,
-        #         'default_address': order.address,
-        #         'default_county': order.county,
-        #     }
-        #     user_profile_form = ProfileForm(profile_data, instance=profile)
-        #     if user_profile_form.is_valid():
-        #         user_profile_form.save()
+        if save_info:
+            profile_data = {
+                'default_phone_number': order.phone_number,
+                'default_country': order.country,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_address': order.address,
+                'default_county': order.county,
+            }
+            user_profile_form = ProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
         A confirmation email will be sent to {order.email}.')
