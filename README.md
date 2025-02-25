@@ -1,131 +1,77 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Pedal Power
 
-Welcome Lee Copeman,
+Live Version: [Pedal Power](https://pedal-power-store-be92afa30294.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Repository: [GitHub Repo](https://github.com/l-copeman/bicycle-store)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+The app is developed by [Lee Copeman](https://github.com/l-copeman).
 
-## Gitpod Reminders
+![Pedal Power](documentation/features/screenshots/main-page-2.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## About
 
-`python3 -m http.server`
+[Pedal Power](https://pedal-power-store-be92afa30294.herokuapp.com/) is a fully responsive e-commerce website, designed for cycling enthusiasts to browse and purchase a range of bicycle products. The project offers a real-world online store, offering features such as user authentication, a shopping cart, secure payments via Stripe, and an intuitive product management system.
 
-A blue button should appear to click: _Make Public_,
+This project was developed as part of a full-stack web development course, focusing on best practices for backend logic, database management, front-end UI, and deployment. The site allows both customers and admins to interact with the platform seamlessly, with CRUD functionality for products and order management.
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## User Experience Design
 
-A blue button should appear to click: _Make Public_,
+### Strategy
 
-Another blue button should appear to click: _Open Browser_.
+Developed for users who are cooking in the household. The app is designed to be easy to use and intuitive. A selection of recipes are easily viewed, with a title, a short excerpt, the recipe author, servings per recipe and finally an image. An individual recipe can then by viewed, listing the ingredients required for the receipe, and easy to follow steps. As a final goal, the app allows users to leave comments regarding their experiences of the recipe.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Target Audience
 
-To log into the Heroku toolbelt CLI:
+The website was developed for cyclists who are looking to purchase a bicycle. The nature of cycling allows this to have a great range in terms of target audience; from very young children to elderly.  
+  * Young children looking for their first bike, whether it be a balance bike or with pedals.
+  * Adults who require a bike for leisure
+  * Enthusiasts who are looking for a higher spec bike 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### User Stories
 
-### Connecting your Mongo database
+#### **First Time Visitor Goals**
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+| Issue ID    | User Story |
+|-------------|-------------|
+|[#6](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95539892&issue=l-copeman%7Cbicycle-store%7C6)| As a First Time Visitor, I can view a list of products so that I can decide what I can purchase |
+|[#10](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95639520&issue=l-copeman%7Cbicycle-store%7C10)|As a First Time Visitor, I can search for a product by name or description so that I can easily find a specific product I want to purchase.|
+|[#7](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95540872&issue=l-copeman%7Cbicycle-store%7C7)|As a First Time Visitor, I can view individual product details so that I can determine the price and description.|
+|[#11](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95642432&issue=l-copeman%7Cbicycle-store%7C11)|As a First Time Visitor, I can easily select the quantity and size of any product I want to purchase so that I don't accidentally select the wrong product, size or quantity.|
+|[#14](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97050593&issue=l-copeman%7Cbicycle-store%7C14)|As a First Time Visitor, I can click different categories so that I can view products in these categories.|
+|[#23](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97930853&issue=l-copeman%7Cbicycle-store%7C23)|As a First Time Visitor, I can see products similar to what I am currently viewing so that I can see more products I might be interested in.|
+|[#8](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95541369&issue=l-copeman%7Cbicycle-store%7C8)|As a First Time Visitor, I can easily view the total of my purchases at any time so that keep track of what is being spent.|
+|[#15](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97926369&issue=l-copeman%7Cbicycle-store%7C15)|As a First Time Visitor, I can change the quantity of items in my bag so that I can make changes before checkout.|
+|[#16](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97926609&issue=l-copeman%7Cbicycle-store%7C16)|As a First Time Visitor, I can easily enter my payment details so that I can purchase items from the store.|
+|[#17](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97926861&issue=l-copeman%7Cbicycle-store%7C17)|As a First Time Visitor, I can view confirmation of my order so that I can ensure no mistakes were made.|
 
-------
+#### **Frequent Visitor Goals**
 
-## Release History
+| Issue ID    | User Story |
+|-------------|-------------|
+|[#1](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95520839&issue=l-copeman%7Cbicycle-store%7C1)|As a Frequent User, I can easily register for an account so that I have a personal account and I can view my profile.|
+|[#2](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95521596&issue=l-copeman%7Cbicycle-store%7C2)|As a Frequent User, I can easily login and logout so that I can access my personal account information.|
+|[#5](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95536459&issue=l-copeman%7Cbicycle-store%7C5)|As a Frequent User, I can have a personalised user profile so that I can view my personal order history and order confirmations.|
+|[#4](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95524076&issue=l-copeman%7Cbicycle-store%7C4)|As a Frequent User, I can receive an email after registering so that my account registration is verified.|
+|[#3](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95522901&issue=l-copeman%7Cbicycle-store%7C3)|As a Frequent User, I can easily recover a lost password so that I can gain access to my account|
+|[#24](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=99384390&issue=l-copeman%7Cbicycle-store%7C24)|As a Frequent User, I can sign up for a monthly newsletter so that I can keep up to date with the company and any promotions.|
+|[#25](https://github.com/users/l-copeman/projects/5?pane=issue&itemId=99384794&issue=l-copeman%7Cbicycle-store%7C25)|As a Frequent User, I can navigate to the Facebook page so that I can keep in contact with the company.|
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### **Site Admin**
 
-**June 18, 2024,** Add Mongo back into template
+| Issue ID    | User Story |
+|-------------|-------------|
+|[#19](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97927725&issue=l-copeman%7Cbicycle-store%7C19)|As Site Admin, I can add products to the site so that I can keep the products updated. |
+|[#20](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97928501&issue=l-copeman%7Cbicycle-store%7C20)|As Site Admin, I can edit products so that products can be updated accordingly. |
+|[#21](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97928897&issue=l-copeman%7Cbicycle-store%7C21)|As Site Admin, I can delete a product so that the site only shows products available for purchase. |
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+#### **Future Goals**
 
-**May 28 2024:** Fix Mongo and Links installs
+| Issue ID    | User Story |
+|-------------|-------------|
+|[#13](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95647712&issue=l-copeman%7Cbicycle-store%7C13)|As a Site User, I can leave a review after purchasing a product so that other users can view reviews before purchasing.|
+|[#9](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95638558&issue=l-copeman%7Cbicycle-store%7C9)|As a site user I can easily identify deals and special offers so that I can benefit from the savings on these products.|
+|[#22](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97929633&issue=l-copeman%7Cbicycle-store%7C22)|As a site user I can view an about page so that I can learn about the store.|
+|[#18](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97927156&issue=l-copeman%7Cbicycle-store%7C18)|As a site user I can receive an email of my order so that I can keep confirmation of the order.|
 
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!

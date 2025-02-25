@@ -30,6 +30,11 @@ def all_products(request):
                 description__icontains=query)
             products = products.filter(queries)
 
+            if not products.exists():
+                messages.warning(
+                    request, "No products match your search. \
+                        Please try again.")
+
     context = {
         'products': products,
         'search_input': query,

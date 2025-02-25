@@ -49,6 +49,10 @@ header {
     text-decoration: underline;
 }
 
+.arrow-hv:hover {
+    background-color: rgb(69, 125, 69);
+}
+
 .btn-style {
     border: 2px solid rgb(251, 251, 42);
     color: rgb(255, 255, 255);
@@ -265,6 +269,11 @@ footer {
         margin-left: 3px;
         margin-right: 3px;
         margin-bottom: 6px;
+    }
+
+    body {
+        background: url('https://res.cloudinary.com/de3tk1vz7/image/upload/v1740234949/homepage-image4_y2bzqq.jpg') no-repeat right top fixed;
+        background-size: cover;
     }
 }
 
