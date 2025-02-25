@@ -6,16 +6,16 @@
     <nav class="w-100 navbar-nav">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a href="{% url 'products' %}?category=Road,Mountain,Kids" class="nav-link btn btn-outline-success text-white btn-products" aria-current="page">All Bikes</a>
+                <a href="{% url 'products' %}?category=Road,Mountain,Kids" class="nav-link btn btn-outline-success text-white prod-sm btn-products" aria-current="page">All Bikes</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'products' %}?category=Road" class="nav-link btn btn-outline-success text-white btn-products">Road Bikes</a>
+                <a href="{% url 'products' %}?category=Road" class="nav-link btn btn-outline-success text-white prod-sm btn-products">Road Bikes</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'products' %}?category=Mountain" class="nav-link btn btn-outline-success text-white btn-products">Mount Bikes</a>
+                <a href="{% url 'products' %}?category=Mountain" class="nav-link btn btn-outline-success text-white prod-sm btn-products">Mount Bikes</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'products' %}?category=Kids" class="nav-link btn btn-outline-success text-white btn-products">Kids Bikes</a>
+                <a href="{% url 'products' %}?category=Kids" class="nav-link btn btn-outline-success text-white prod-sm btn-products">Kids Bikes</a>
             </li>
         </ul>
     </nav>
@@ -39,7 +39,7 @@
                     <a href="{% url 'product_detail' product.id %}" class="product-link">
                         <div class="card mt-3 product-card">
                             <div class="card-header bg-white pb-0">
-                                <p class="mb-0 mt-2 fw-bold" title="{{ product.name}}">{{ product.name|truncatechars:16 }}</p>
+                                <p class="mb-0 mt-2 fw-bold" title="{{ product.name}}">{{ product.name|truncatechars:18 }}</p>
                             </div>
                             <div class="img-product">
                             {% if "placeholder" in product.image.url %}

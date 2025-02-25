@@ -235,6 +235,39 @@ footer {
 
 /* -------------------------------- Media Queries */
 
+@media (max-width: 575.9px) {
+    .btn-style {
+        min-width: 47px;
+        min-height: 47px;
+        margin-top: 8px;
+        margin-right: 2px;
+        padding: 4px;
+        font-size: 11px;
+    }
+
+    .input-height {
+        margin-top: 8px;
+        margin-right: 10px;
+        padding: 5px;
+    }
+
+    .btn-search {
+        min-width: 62px;
+        min-height: 47px;
+        margin-top: 8px;
+        margin-left: 5px;
+        font-size: 11px;
+    }
+
+    .prod-sm {
+        font-size: 11px;
+        padding: 4px !important;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 6px;
+    }
+}
+
 @media (min-width: 576px) and (max-width: 767.99px) {
     .product-card {
         width: 225px;
