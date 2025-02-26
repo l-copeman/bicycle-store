@@ -15,18 +15,15 @@
         </div>
     </div>
     <div class="row mt-3 w-75">
-        <div class="col-10 offset-1 text-center map-container">
+        <div class="col-lg-8 col-sm-6 offset-1 text-center map-container">
             {{ about.map_embed|safe }}
         </div>
-    </div>
-    <div class="row">    
-        <div class="col-10 offset-1">
+        <div class="col-lg-4 col-sm-6 offset-1 mt-2">
             <p><span class="fw-bold">Address:</span> {{ about.address}}</p>
             <p><span class="fw-bold">Phone Number:</span> {{ about.phone}}</p>
             <p><span class="fw-bold">Email Address:</span> {{ about.email}}</p>
         </div>
     </div>    
-    </div>
     <div class="row">
         <div class="text-center">
             <a href="{% url 'products' %}" class="btn shop-now rounded-0 btn-lg text-white text-uppercase mt-3 p-1">

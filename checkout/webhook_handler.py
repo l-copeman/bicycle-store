@@ -50,7 +50,6 @@ class StripeWH_Handler:
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
-        print(intent)
         save_info = intent.metadata.save_info
 
         # Get the Charge object
@@ -120,7 +119,7 @@ class StripeWH_Handler:
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     country=shipping_details.address.country,
-                    post_code=shipping_details.address.postal_code,
+                    postcode=shipping_details.address.postal_code,
                     town_or_city=shipping_details.address.city,
                     address=shipping_details.address.line1,
                     original_bag=bag,
