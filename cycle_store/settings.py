@@ -59,8 +59,9 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'about',
     'crispy_forms',
-    'crispy_bootstrap5'
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [

@@ -237,6 +237,10 @@ footer {
     margin-bottom: 20rem !important;
 }
 
+.map-container {
+    max-width: 40%;
+}
+
 /* -------------------------------- Media Queries */
 
 @media (max-width: 575.9px) {
