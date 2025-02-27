@@ -75,3 +75,205 @@ The website was developed for cyclists who are looking to purchase a bicycle. Th
 |[#22](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97929633&issue=l-copeman%7Cbicycle-store%7C22)|As a site user I can view an about page so that I can learn about the store.|
 |[#18](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97927156&issue=l-copeman%7Cbicycle-store%7C18)|As a site user I can receive an email of my order so that I can keep confirmation of the order.|
 
+---
+
+## Technologies used
+
+- ### Languages:
+    
+    + [Python 3.12.8](https://www.python.org/downloads/release/python-3127/): the primary language used to develop the server-side of the website.
+    + [JS](https://www.javascript.com/): the primary language used to develop interactive components of the website.
+    + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): the markup language used to create the website.
+    + [CSS](https://developer.mozilla.org/en-US/docs/Web/css): the styling language used to style the website.
+
+- ### Frameworks and libraries:
+
+    + [Django](https://www.djangoproject.com/): python framework used to create all the logic.
+    + [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/): a front-end CSS framework library.
+
+- ### Databases:
+
+    + [PostgreSQL](https://www.postgresql.org/): the database used to store all the data.
+
+- ### Other tools:
+
+    + [GitPod](https://gitpod.io/): IDE used to develop the website.
+    + [VSCode](https://code.visualstudio.com/): IDE also used to develop this website.
+    + [Pip3](https://pypi.org/project/pip/): the package manager used to install the dependencies.
+    + [Django-allauth](https://django-allauth.readthedocs.io/en/latest/): the authentication library used to create the user accounts.
+    + [Django-crispy-forms](https://django-cryptography.readthedocs.io/en/latest/): was used to control the rendering behavior of Django forms.
+    + [Heroku](https://id.heroku.com/): the cloud platform used to host the website.
+    + [GitHub](https://github.com/): used to host the website's source code.
+    + [Chrome DevTools](https://developer.chrome.com/docs/devtools/open/): was used to debug the website.
+    + [Font Awesome](https://fontawesome.com/): was used to create the icons used in the website. 
+    + [W3C Validator](https://validator.w3.org/): was used to validate HTML5 code for the website.
+    + [W3C CSS validator](https://jigsaw.w3.org/css-validator/): was used to validate CSS code for the website.
+    + [JShint](https://jshint.com/): was used to validate JS code for the website.
+    + [PEP8](https://pep8ci.herokuapp.com/#): was used to validate Python code for the website.
+
+---
+
+## FEATURES
+
+Please refer to the [FEATURES.md](FEATURES.md) file for all features-related documentation.
+
+---
+
+## Design
+
+### Color Scheme
+
+The chosen color scheme for the project predominantly features green, symbolizing nature, sustainability, and the eco-friendly benefits of cycling. This reinforces the idea that cycling is a clean, environmentally conscious mode of transport. Green evokes a sense of freshness and harmony, aligning with the project’s theme. Additionally, yellow accents are used throughout the design to create contrast and visual interest. Yellow is associated with energy, positivity, and movement, complementing the green while ensuring important elements stand out. The combination of these colors enhances readability, improves user experience, and reinforces the project’s environmental message.
+
+- ![Color](documentation/design/colour-1.png)
+  - Was used for header and footer, as well as button styling
+- ![Color](documentation/design/colour-2.png)
+  - Was used for borders
+- ![Color](documentation/design/colour-3.png)
+  - Was used for message container
+- ![Color](documentation/design/colour-4.png)
+  - Was used for the overlay for pages apart from landing page
+- ![Color](documentation/design/colour-5.png)
+  - Was used for some hover effects and loading overlay
+
+
+### Typography
+
+The main font used in the application is Rubik. The font-family was chosen due to its readability, which increases user experience.
+
+  ![Typography](documentation/design/typ-reg.png)
+
+  ![Typography](documentation/design/typ-italic.png)
+
+  ![Typography](documentation/design/typ-bold.png)
+
+
+### Imagery
+
+The images used for the recipes were downloaded from the following sites:
+
+- [Crepes Image link](https://pixabay.com/photos/pancakes-yummy-dessert-3926009/)
+- [Vegan Katsu Image link](https://www.pexels.com/search/katsu/)
+- [Cookie Image link](https://www.pexels.com/search/choc%20chip%20cookie/)
+- [Vegetarian Chilli Image link](https://unsplash.com/photos/a-bowl-of-food-VAbBclifmvY)
+- [Cheese Straw Image link](https://www.vecteezy.com/photo/47277296-cheese-sticks-with-herbs-on-a-white-surface)
+- [Spinach and Feta Quiche Image link](https://www.pexels.com/search/quiche/)
+
+Images were converted to `webp` format with Convertio to reduce size and therefore increase load time to improve UX.
+
+[Font Awesome](https://fontawesome.com/) was used for the icons in the app.
+
+
+### Wireframes
+
+Wireframes were used to give visual views of how the pages should display the information. These were a first draft, so some stylings and colors are not represented in the finished project.
+
+- Mobile Phone layout for homepage. 
+  - ![Wireframe for Mobile]()
+- Laptop layout for homepage. 
+  - ![Wireframe for Laptop]()
+- Mobile Phone layout 
+  - ![Mobile Recipe Feature]()
+- Laptop layout for 
+  - ![Laptop Recipe Feature]()
+
+---
+
+## Information Architecture
+
+### Database
+
+- The database used for the project is PostgreSQL.
+
+### Entity-Relationship Diagram
+
+#### Allauth's User model.
+
+| Name          | Field Type    | Validation |
+| --------------|-------------- | ---------- |
+| UserName      | CharField     |  max_length=150, blank=False, null=True, unique=True    |
+| Email         | EmailField    | max_length=50   |
+| Password      | TextField     | min_length=8, blank=False, null=False    |
+
+---
+## Testing
+
+Please refer to the [TESTING.md](TESTING.md) file for all test-related documentation.
+
+---
+
+## Deployment
+
+
+- The app was deployed to [Heroku](https://id.heroku.com/).
+- The app can be reached by the [link](https://pedal-power-store-be92afa30294.herokuapp.com/).
+
+## Heroku Deployment
+
+- Set up a local workspace on your computer for Heroku:
+    - Create a list of requirements that the project needs to run:
+      - type this in the terminal: `pip3 freeze > requirements.txt`
+    - Commit and push the changes to GitHub
+    
+- Go to [www.heroku.com](www.heroku.com) 
+- Log in or create a Heroku account.
+- Create a new app with any unique name <name app>
+- Create a Procfile in your local workplace:
+    
+    This file will will contain the following:
+    ```python
+        web: gunicorn <name app>.wsgi:application
+    ```
+- Commit and push the changes to GitHub.
+- Go to resources in Heroku and search for postgresql. Select Hobby dev - Free and click on the provision button to add it to the project.
+- Go to the settings app in Heroku and go to Config Vars
+- Click on Reveal Config Vars and add the following config variables:
+
+| Key      | Value          |
+|-------------|-------------|
+| DATABASE_URL | ... | 
+| DISABLE_COLLECTSTATIC | 1 |
+| SECRET_KEY | ... |
+| CLOUDINARY_URL | ... |
+| EMAIL_HOST_PASS | ... |
+| EMAIL_HOST_USER | ... |
+| STRIPE_PUBLIC_KEY | ... |
+| STRIPE_SECRET_KEY | ... |
+| STRIPE_WH_SECRET | ... |
+
+
+- Copy the value of DATABASE_URL and input it into the .env file and generate a secret key (you may use [Djecrety](https://djecrety.ir/) for secret key generation).
+- Migrate changes.
+- Set debug to False in settings.py
+- Commit and push the changes to GitHub.
+- Connect your repository to Heroku.
+- Deploy the app to Heroku by clicking "Deploy Branch" button. If you want to enable auto-deployment, click "Enable Automatic Deployment".
+- The deployment process will start.
+- Once deployed, the app can be opened!
+
+**Final Deployment**
+
+* Set debug to False locally + delete DISABLE_COLLECTSTATIC from config vars in Heroku dashboard.
+* Commit and push the changes to GitHub.
+
+
+---
+
+## Credits
+
+- [GitHub](https://github.com/) for giving the idea of the project's design.
+- [Django](https://www.djangoproject.com/) for the framework.
+- [Font awesome](https://fontawesome.com/): for the free access to icons.
+- [Heroku](https://www.heroku.com/): for the free hosting of the website.
+- [Icons8](https://icons8.com/): for providing free access to amazing icons and illustrations.
+- [Postgresql](https://www.postgresql.org/): for providing a free database.
+- [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb/related?hl=en): for providing a free platform to test website responsiveness
+- [Favicon Generator. For real.](https://realfavicongenerator.net/): for providing a free platform to generate favicons.
+
+---
+
+## Acknowledgments
+
+- Code Institute community and my mentor, Juliia Konovalova for their support and guidance through the project.
+- My partner, Cristina Bonilla, for her continued support enabling me to complete this project.
+

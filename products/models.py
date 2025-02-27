@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Category(models.Model):
@@ -28,7 +29,8 @@ class Product(models.Model):
     price = models.DecimalField(
         max_digits=6, decimal_places=2, blank=False, null=False)
     rating = models.DecimalField(
-        max_digits=3, decimal_places=1, blank=False, null=False)
+        max_digits=3, decimal_places=1, blank=False, null=False,
+        validators=[MinValueValidator(0), MaxValueValidator(5)])
 
     def __str__(self):
         return self.name
