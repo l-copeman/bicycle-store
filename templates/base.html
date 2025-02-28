@@ -83,11 +83,11 @@
           <div class="dropdown d-inline">
             <button class="btn btn-sm btn-outline-success btn-style dropdown me-1" type="button" id="accountDropdown"
               data-bs-toggle="dropdown" aria-expanded="false">
-            <div><i class="fa-regular fa-user"></i></div>
+            <i class="fa-regular fa-user"></i>
             {% if user.is_authenticated %}
-              <p class="my-0">{{ user }}</p>
+              <span class="my-0">{{ user }}</span>
             {% else %}
-              <p class="my-0">Account</p>
+              <span class="my-0">Account</span>
               {% endif %}
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
@@ -176,7 +176,7 @@
         <p class="text-center">Follow us on Social Media, for latest news and promotions!</p>
         <ul class="list-unstyled text-center list-inline social-link">
           <li class="list-inline-item">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+            <a href="https://www.facebook.com/profile.php?id=61573724759034#" target="_blank" rel="noopener"
               aria-label="Visit Pedal Power's Facebook page (opens in new tab)" class="text-white social-link"><i class="fa-brands fa-facebook"></i></a>
           </li>
           <li class="list-inline-item">
