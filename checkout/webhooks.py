@@ -12,6 +12,7 @@ import stripe
 @csrf_exempt
 def webhook(request):
     """Listen for webhooks from Stripe"""
+    print("CURRENTLY IN: ", webhook)
     # Setup
     wh_secret = settings.STRIPE_WH_SECRET
     stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -36,6 +37,7 @@ def webhook(request):
 
     # Set up a webhook handler
     handler = StripeWH_Handler(request)
+    print("CURRENTLY IN: ", handler)
 
     # Map webhook events to relevant handler functions
     event_map = {

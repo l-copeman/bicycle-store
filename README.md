@@ -45,6 +45,8 @@ The website was developed for cyclists who are looking to purchase a bicycle. Th
 |[#15](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97926369&issue=l-copeman%7Cbicycle-store%7C15)|As a First Time Visitor, I can change the quantity of items in my bag so that I can make changes before checkout.|
 |[#16](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97926609&issue=l-copeman%7Cbicycle-store%7C16)|As a First Time Visitor, I can easily enter my payment details so that I can purchase items from the store.|
 |[#17](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97926861&issue=l-copeman%7Cbicycle-store%7C17)|As a First Time Visitor, I can view confirmation of my order so that I can ensure no mistakes were made.|
+|[#22](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97929633&issue=l-copeman%7Cbicycle-store%7C22)|As a site user I can view an about page so that I can learn about the store.|
+|[#18](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97927156&issue=l-copeman%7Cbicycle-store%7C18)|As a site user I can receive an email of my order so that I can keep confirmation of the order.|
 
 #### **Frequent Visitor Goals**
 
@@ -72,8 +74,12 @@ The website was developed for cyclists who are looking to purchase a bicycle. Th
 |-------------|-------------|
 |[#13](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95647712&issue=l-copeman%7Cbicycle-store%7C13)|As a Site User, I can leave a review after purchasing a product so that other users can view reviews before purchasing.|
 |[#9](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=95638558&issue=l-copeman%7Cbicycle-store%7C9)|As a site user I can easily identify deals and special offers so that I can benefit from the savings on these products.|
-|[#22](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97929633&issue=l-copeman%7Cbicycle-store%7C22)|As a site user I can view an about page so that I can learn about the store.|
-|[#18](https://github.com/users/l-copeman/projects/5/views/1?pane=issue&itemId=97927156&issue=l-copeman%7Cbicycle-store%7C18)|As a site user I can receive an email of my order so that I can keep confirmation of the order.|
+
+---
+
+## MARKETING
+
+Please refer to the [MARKETING.md](MARKETING.md) file for all marketing-related documentation.
 
 ---
 
@@ -185,15 +191,104 @@ Wireframes were used to give visual views of how the pages should display the in
 
 - The database used for the project is PostgreSQL.
 
-### Entity-Relationship Diagram
+### Entity-Relationship Diagrams
 
-#### Allauth's User model.
+
+#### Allauth's User Model
 
 | Name          | Field Type    | Validation |
 | --------------|-------------- | ---------- |
-| UserName      | CharField     |  max_length=150, blank=False, null=True, unique=True    |
+| UserName      | CharField     | max_length=150, blank=False, null=True, unique=True    |
 | Email         | EmailField    | max_length=50   |
 | Password      | TextField     | min_length=8, blank=False, null=False    |
+
+
+#### About Model
+
+| Name          | Field Type    | Validation |
+| --------------|-------------- | ---------- |
+| name          | CharField     | max_length=100, blank=True, null=True    |
+| mission       | TextField     | max_length=1000, blank-True, null=True   |
+| description   | TextField     | max_length=2000, blank=True, null=True   |
+| address       | CharField     | max_length=255, blank=True, null=True   |
+| phone         | CharField     | max_length=20, blank=True, null=True   |
+| email         | EmailField    | blank=True, null=True   |
+| map-embed     | TextField     | blank=True, null=True   |
+
+
+#### Order Model
+
+| Name          | Field Type    | Validation |
+| --------------|-------------- | ---------- |
+| order_number  | CharField     | max_length=32, editable=False, null=False  |
+| user_profile  | TextField     | on_delete=MODELS.SET_NULL, blank-True, null=True   | ForeignKey 
+| full_name     | CharField     | max_length=100, blank=False, null=False   |
+| phone_number  | CharField     | max_length=20, blank=False, null=False   |
+| address       | TextField     | max_length=80, blank=False, null=False   |
+| town_or_city  | CharField    | max_length=40, blank=False, null=False   |
+| county        | CharField    | max_length=50, blank=True, null=True   |
+| postcode      | CharField    | max_length=20, blank=True, null=True   |
+| country       | CountryField  | blank_label='Country*', blank=False, null=False   |
+| status        | CharField    | max_length=10, choices=OrderStatus.choices,   |
+| | |  default=OrderStatus.PENDING  |
+| date          | DateTimeField | auto_now_add=True  |
+| delivery_cost | DecimalField  | max_digits=6, decimial_places=2, null=False, default=0   |
+| order_total   | DecimalField  | max_digits=10, decimial_places=2, null=False, default=0   |
+| grand_total   | DecimalField  | max_digits=10, decimial_places=2, null=False, default=0    |
+| original_bag  | TextField     | null=False blank=False, default=''  |
+| stripe_pid    | CharField    | max_length=254, blank=False, null=False, default=''  |
+|   | **OrderStatus:** |   'PENDING'
+|   |    |   'PAID'
+|   |    |   'SHIPPED'
+|   |    |   'DELIVERED'
+|   |    |   'CANCELLED'
+
+
+#### OrderLineItem Model
+
+| Name          | Field Type    | Validation |
+| --------------|-------------- | ---------- |
+| order         | ForeignKey   | Order, blank=False, null=False, 
+| |   | on_delete=models.CASCADE, relate_name='lineitems'    |
+| product       | ForeignKey    | Product, null=False, blank=False, on_delete=models.CASCADE,   |
+| quantity      | IntegerField   | null=False blank=False, default=0     |
+| lineitem_total| DecimalField   | max_digits=6, decimial_places=2, |
+| | | null=False blank=False, editable=False     |
+
+
+#### Category Model
+
+| Name          | Field Type    | Validation |
+| --------------|-------------- | ---------- |
+| name          | CharField    | max_length=250  |
+
+
+#### Product Model
+
+| Name          | Field Type    | Validation |
+| --------------|-------------- | ---------- |
+| category      | ForeignKey   | Category, blank=False, null=True, on_delete=models.SET_NULL | 
+| sku           | CharField    | max_length=250, unique=True, blank=False, null=False   |
+| name          | CharField    | max_length=250, unique=True, blank=False, null=False   |
+| image         | CloudinaryField   | 'image', default='placeholder'    |
+| description   | TextField   | max_length=3000, blank=False, null=False  |
+| colour        | CharField| max_length=30, null=False blank=False,  |
+| price   | DecimalField   | max_digits=6, decimal_places=2, blank=False, null=False  |
+| rating        | DecimalField  | max_digits=3, decimal_places, blank=False, null=False, |
+| | | validators=[MinValueValidator(0), MaxValueValidator(5)] |
+
+
+#### Profile Model
+
+| Name          | Field Type    | Validation |
+| --------------|-------------- | ---------- |
+| user          | OneToOneField | User, on_delete=models.CASCADE | 
+| default_phone_number   | CharField    | max_length=20, null=True, blank=True |
+| default_address     | CharField    | max_length=40, null=True, blank=True  |
+| default_town_or_city  | CharField   | 'image', default='placeholder'    |
+| default_county   | CharField   | max_length=80, null=True, blank=True |
+| default_postcode | CharField| max_length=30, null=False blank=False,  |
+| default_country   | CountryField   | blank_label='Country', null=True, blank=True |
 
 ---
 ## Testing

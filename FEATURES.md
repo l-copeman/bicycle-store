@@ -21,7 +21,7 @@ Header has the following links:
 
 ![Signed in Dropdown](documentation/features/sign-in-drop.png)
 
-- Shopping basket
+- Shopping bag, displaying the price of items in the bag
     - Text changes to yellow and background a differnt shade of green when hovered over
 - Search bar
     - Colour of icon in search bar changes to yellow when hovered over
@@ -147,4 +147,171 @@ If a user navigtes to the shopping bag when it is empty, a message indicating th
 
 ![Empty Shopping Bag](documentation/features/empty-bag.png)
 
+Shopping bag layout for larger screens
 
+![Shopping Bag Large Screens](documentation/features/shopping-bag-lg.png)
+
+Each product line has:
+- Product name
+- Price of individual item
+- Quantity, with buttons to increaase/decrease
+- Update quantity button - has hover properties, icon increases in size
+- Delete item button - has hover properties, icon increases in size
+- Subtotal
+
+Shopping bag layout for small screens
+
+![Shopping Bag Small Screens](documentation/features/shopping-bag-sm.png)
+
+Each product line has:
+- Product image
+- Quantity, with buttons to increaase/decrease
+- Update quantity button - has hover properties, icon increases in size
+- Delete item button - has hover properties, icon increases in size
+- Subtotal
+
+For all screensizes there is a continue shopping button, so users can add more items of they wish.
+
+Below the summary of the shopping bag is the checkout section
+
+![Secure Checkout](documentation/features/secure-checkout.png)
+
+The subtotal is shown, along with any delivering costs, depending on the amout spent, and the grand total. If the users wants to checkout, they are now able to click the secure checkout button.
+
+---
+
+## Checkout Page
+
+Layout of the checkout page
+
+![Checkout Page](documentation/features/checkout-layout.png)
+
+At the top of the page the user is shown a summary of their order. There is a button to adjust bag, in case the user has made a mistake and wishes to change their bag. The summary includes:
+- Item name
+- Image
+- Quantity
+- Subtotals
+- Delivery Cost
+- Grand Total
+
+![Checkout Summary](documentation/features/order-summary.png)
+
+The user has to complete the checkout form, which includes:
+- Full name
+- Email
+- Phone Number
+- Address
+- Postcode
+- Town or City
+- County
+- Country
+- Card Details
+
+When all checkout form has been completed the user can click complete order
+- The total amount the user will be charged on their card is shown in red.
+![Checkout Summary](documentation/features/complete-order.png)
+
+---
+
+## Checkout Success Page
+
+When the order has gone through successfully, the user is taken to the checkout success page. 
+
+![Checkout Success Page](documentation/features/checkout-success-page.png)
+
+The page is titled with a thankyou message, and a note telling the user they will receive an email, sent to the users email
+
+![Checkout Success Email](documentation/features/confirmation-email.png)
+
+The order information is shown, including:
+
+![Order Information](documentation/features/order-info.png)
+- Order Number
+- Orer Date
+- Order Status
+
+![Order Details](documentation/features/order-details.png)
+- Order Items
+- Price of Item
+
+![Delivery Information](documentation/features/delivery-info.png)
+- Full name
+- Email
+- Phone Number
+- Address
+- Postcode
+- Town or City
+- County
+- Country
+
+![Billing Information](documentation/features/billing-info.png)
+- Order Totak
+- Delivery Cost
+- Grand Total
+
+Below the order information the user is able to click the continue shopping button, directing them back to the products page.
+
+![Continue Shopping](documentation/features/shop-again.png)
+
+---
+
+## Confirmation Email
+
+After an order has been placed, the user will receive an email with the order details.
+
+![Confirmation Email](documentation/features/email-confirmation.png)
+
+- The email subject has `Pedal Power` followed by the order number
+
+The body of the email contains:
+- A personalised hello greeting, to the users name
+- Thankyou message
+- Order Number
+- Order Date
+- Delivery Address
+- Users Email
+- Sign off message from Pedal Power
+
+---
+
+## Profile Page
+
+When a user is signed in, they will have their own profile page. This page will keep their personal information saved, enabling a quicker checkout process for any future orders. The profile page will also keep record of any past orders.
+
+Profile page for larger screens
+![Profile Page Laptop](documentation/features/profile-lg.png)
+
+Profile page for small screens
+![Profile Page Small Screen](documentation/features/profile.sm.png)
+
+Order history is summarised:
+- Order number. Truncated to 6 characters, which is a link to the past order confirmation page
+- Order date
+- Items
+- Order Total
+
+![Order History](documentation/features/order-history.png)
+
+If the user clicks of the order number to show the order confirmation, there is a back to profile button, so they can return to their profile page.
+
+![Back To Profile Page](documentation//features/back-to-profile.png)
+
+---
+
+## About Page
+
+Within the footer, users are able to click the link taking them to the about page. This page was created to give users information about Pedal Power.
+
+About page layout for larger screens
+![About Page Large Screem](documentation//features/about-lg.png)
+
+About page layout for small screens
+![About Page Small Screen](documentation//features/about-sm.png)
+
+The page consists of:
+- A description of the business, giving some background information.
+- Address of the store
+- Email address for store
+- Telephone number 
+- Mission statement 
+- There is also a button directing users to the products page.

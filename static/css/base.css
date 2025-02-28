@@ -195,12 +195,12 @@ footer {
     width: 100%;
 }
 
-.hr-footer {
+/* .hr-footer {
     border: none;
     background-color:rgb(251, 251, 42);
     height: 20px;
     width: 75%;
-}
+} */
 
 .bottom {
     margin-top: auto;
@@ -284,7 +284,7 @@ footer {
     }
 
     body {
-        background: url('https://res.cloudinary.com/de3tk1vz7/image/upload/v1740234949/homepage-image4_y2bzqq.jpg') no-repeat right top fixed;
+        background: url('https://res.cloudinary.com/de3tk1vz7/image/upload/v1740234949/homepage-image4_y2bzqq.jpg') no-repeat left center fixed;
         background-size: cover;
     }
 }
