@@ -167,19 +167,6 @@ Images were converted to `webp` format with Convertio to reduce size and therefo
 [Font Awesome](https://fontawesome.com/) was used for the icons in the app.
 
 
-### Wireframes
-
-Wireframes were used to give visual views of how the pages should display the information. These were a first draft, so some stylings and colors are not represented in the finished project.
-
-- Mobile Phone layout for homepage. 
-  - ![Wireframe for Mobile]()
-- Laptop layout for homepage. 
-  - ![Wireframe for Laptop]()
-- Mobile Phone layout 
-  - ![Mobile Recipe Feature]()
-- Laptop layout for 
-  - ![Laptop Recipe Feature]()
-
 ---
 
 ## Information Architecture
