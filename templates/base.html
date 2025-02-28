@@ -83,7 +83,7 @@
           <div class="dropdown d-inline">
             <button class="btn btn-sm btn-outline-success btn-style dropdown me-1" type="button" id="accountDropdown"
               data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-regular fa-user"></i>
+            <i class="fa-regular fa-user"></i><br>
             {% if user.is_authenticated %}
               <span class="my-0">{{ user }}</span>
             {% else %}
@@ -237,7 +237,7 @@
   </footer>
 
   {% block postloadjs %}
-  <script type="text/javascript">
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
       var toastClassList = [].slice.call(document.querySelectorAll('.toast'));
       toastClassList.forEach(function (toastClass) {
@@ -247,7 +247,7 @@
     });
   </script>
   <!-- Mailchimp -->
-  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
 
   {% endblock %}
 
