@@ -38,7 +38,6 @@ header {
 
 .danger {
     width: fit-content;
-    border: 2px solid rgb(251, 251, 42);
     background-color: rgb(251, 251, 42);
     text-decoration: none;
 }
@@ -74,7 +73,6 @@ header {
 
 .btn-products {
     border: 2px solid rgb(251, 251, 42);
-    /* color: rgb(255, 255, 255); */
     font-size: 15px;
     padding: 5px !important;
     margin-left: 5px;
@@ -166,11 +164,6 @@ header {
     padding: 0;
 }
 
-/* .admin {
-    position: absolute;
-    bottom: 10px;
-} */
-
 /* Profile form */
 #id_default_country,
 #id_default_country option:not(:first-child) {
@@ -195,13 +188,6 @@ footer {
     width: 100%;
 }
 
-/* .hr-footer {
-    border: none;
-    background-color:rgb(251, 251, 42);
-    height: 20px;
-    width: 75%;
-} */
-
 .bottom {
     margin-top: auto;
     width: 100%;
@@ -214,14 +200,6 @@ footer {
 .social-link i:hover {
     color: rgb(251, 251, 42);
 }
-
-/* Mailchimp
-#mc_embed_signup {
-    background: #fff;
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 600px;
-    } */
 
 .product-card {
     border: 3px solid rgb(251, 251, 42); 
@@ -315,14 +293,4 @@ footer {
         width: 230px;
         height: 350px;
     }
-}
-
-.body {
-    color: rgb(28, 102, 28);
-    color: rgb(251, 251, 42);
-    color: rgb(188, 229, 188);
-    color: rgb(237, 255, 237);
-    color: rgb(69, 125, 69);
-    color: rgb
-
 }

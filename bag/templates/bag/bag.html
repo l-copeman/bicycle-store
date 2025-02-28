@@ -70,7 +70,7 @@
                     {% endfor %}
                     <tr class="text-end">
                         <td colspan="4" class="py-3 text-end">
-                            <a href="{% url 'products' %}" class="btn btn-lg shop-now text-white rounded-0 p-1 mb-2">
+                            <a href="{% url 'products' %}" aria-label="Products page loads" class="btn btn-lg shop-now text-white rounded-0 p-1 mb-2">
                                 <span class="text-uppercase">Continue Shopping</span>
                             </a>
                         </td>
@@ -89,7 +89,7 @@
                     </tr>
                     <tr class="text-end">
                         <td colspan="4">
-                            <a href="{% url 'checkout' %}"
+                            <a href="{% url 'checkout' %}" aria-label="Checkout page loads"
                                 class="btn btn-lg shop-now text-white rounded-0 p-1 mb-2 ms-2">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
@@ -104,7 +104,7 @@
             <p class="lead mt-3 mb-5">Oh no! Your bag is empty. Time to go shopping!</p>
             <p class="fst-italic">Standard delivery £15</p>
             <p class="fst-italic">Free delivery when you spend £500</p>
-            <a href="{% url 'products' %}" class="btn shop-now rounded-0 btn-lg text-white text-uppercase mt-3 p-2">
+            <a href="{% url 'products' %}" aria-label="Products page loads" class="btn shop-now rounded-0 btn-lg text-white text-uppercase mt-3 p-2">
                 Continue Shopping
             </a>
             {% endif %}

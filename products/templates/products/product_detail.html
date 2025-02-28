@@ -6,19 +6,19 @@
     <nav class="w-100 navbar-nav">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a href="{% url 'products' %}?category=Road,Mountain,Kids"
+                <a href="{% url 'products' %}?category=Road,Mountain,Kids" aria-label="Products page loads"
                     class="nav-link btn btn-outline-success btn-products prod-sm text-white" aria-current="page">All Bikes</a>
             </li>
-            <li class="nav-item">
-                <a href="{% url 'products' %}?category=Road" class="nav-link btn btn-outline-success text-white prod-sm btn-products">Road
+            <li class="nav-item"> 
+                <a href="{% url 'products' %}?category=Road" aria-label="Products page loads" class="nav-link btn btn-outline-success text-white prod-sm btn-products">Road
                     Bikes</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'products' %}?category=Mountain"
+                <a href="{% url 'products' %}?category=Mountain" aria-label="Products page loads"
                     class="nav-link btn btn-outline-success btn-products prod-sm text-white">Mount Bikes</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'products' %}?category=Kids" class="nav-link btn btn-outline-success prod-sm btn-products text-white">Kids
+                <a href="{% url 'products' %}?category=Kids" aria-label="Products page loads" class="nav-link btn btn-outline-success prod-sm btn-products text-white">Kids
                     Bikes</a>
             </li>
         </ul>
@@ -59,8 +59,8 @@
             </div>
             {% if request.user.is_superuser %}
                 <small class="ms-3">
-                    <a href="{% url 'edit_product' product.id %}" class="shop-now text-white text-uppercase p-1">Edit</a> | 
-                    <a class="text-danger danger text-uppercase p-1" href="{% url 'delete_product' product.id %}">Delete</a>
+                    <a href="{% url 'edit_product' product.id %}" aria-label="Edit product page loads" class="shop-now text-white text-uppercase p-1">Edit</a> | 
+                    <a class="text-danger danger text-uppercase p-1" href="{% url 'delete_product' product.id %}" aria-label="Delete product">Delete</a>
                 </small>
             {% endif %}
             <form class="form ms-3" action="{% url 'add_to_bag' product.id %}" method="POST">
@@ -83,7 +83,7 @@
                             </div>
                             <input type="submit" class="btn btn-lg shop-now text-white rounded-0 text-uppercase p-1 me-5 mt-3 mb-3"
                             value="Add to Bag">
-                            <a href="{% url 'bag_view' %}" class="btn btn-lg shop-now text-white rounded-0 p-1 mt-3 mb-3">
+                            <a href="{% url 'bag_view' %}" aria-label="Shopping bag page loads" class="btn btn-lg shop-now text-white rounded-0 p-1 mt-3 mb-3">
                                 <span class="text-uppercase">View Bag</span>
                             </a> 
                         </div>
@@ -118,7 +118,7 @@
                         <img src="{{ similar_product.image.url }}" class="card-img-top p-2" alt="{{ similar_product.name }}">
                         <div class="card-body">
                             <p class="card-text">£{{ similar_product.price }}</p>
-                            <a href="{% url 'product_detail' similar_product.id %}" class="btn shop-now text-white p-1 text-uppercase">View</a>
+                            <a href="{% url 'product_detail' similar_product.id %}" aria-label="Product detail page loads" class="btn shop-now text-white p-1 text-uppercase">View</a>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
     </div>
     <div class="row">
         <div class="col-12 text-center">
-            <a href="{% url 'products' %}" class="btn btn-lg shop-now text-white rounded-0 p-1 me-1 mt-1 mb-2">
+            <a href="{% url 'products' %}" aria-label="Products page loads" class="btn btn-lg shop-now text-white rounded-0 p-1 me-1 mt-1 mb-2">
                 <span class="text-uppercase">Continue Shopping</span>
             </a>
         </div>

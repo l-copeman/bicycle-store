@@ -166,12 +166,12 @@
     <div class="row">
         <div class="col-12 col-lg-6">
             {% if from_profile %}
-            <a href="{% url 'profile' %}" class="btn shop-now text-white rounded-0 p-2 mb-2 ms-3">
+            <a href="{% url 'profile' %}" aria-label="Profile page loads" class="btn shop-now text-white rounded-0 p-2 mb-2 ms-3">
                 <span class="text-uppercase">Back to profile</span>
             </a>
             {% else %}
             <p class="ms-3">Check out more great products from <span class="fw-bold">Pedal Power</span></p>
-            <a href="{% url 'products' %}" class="btn shop-now text-white rounded-0 p-2 mb-2 ms-3">
+            <a href="{% url 'products' %}" aria-label="Products page loads" class="btn shop-now text-white rounded-0 p-2 mb-2 ms-3">
                 <span class="text-uppercase">Continue Shopping</span>
             </a>
             {% endif %}

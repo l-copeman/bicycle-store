@@ -1,14 +1,16 @@
 {% load static %}
 {% load i18n %}
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   {% block meta %}
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Meta tags for search engines-->
+  <meta name="description" content="Pedal Power, your go-to online bike store for high-quality road, mountain, and kids bikes. Explore eco-friendly cycling options and start your adventure." />
+  <meta name="keywords" content="bikes, pedal, power, bicycle, cycle, road, mountain, kids, explore, adventure, eco-friendly, environment">
+  <meta name="author" content="Lee Copeman">
   {% endblock %}
 
   {% block extra_meta %}
@@ -20,10 +22,10 @@
   <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">  
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/static/favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
   {% endblock %}
 
   {% block extra_css %}
@@ -52,7 +54,7 @@
       <div class="row align-items-center py-2">
         <!-- Logo Section -->
         <div class="col-3">
-          <a href="{% url 'home' %}" class="navbar-brand text-uppercase pedal-logo text-white brand">Pedal<br>Power</a>
+          <a href="{% url 'home' %}" aria-label="Home page loads" class="navbar-brand text-uppercase pedal-logo text-white brand">Pedal<br>Power</a>
         </div>
         <!-- Search Bar Section -->
         <div class="col-md-4 d-none d-md-block">
@@ -95,15 +97,15 @@
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
               </li>
               {% endif %}
-              <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
-              <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+              <li><a href="{% url 'profile' %}" aria-label="Profile page loads" class="dropdown-item">My Profile</a></li>
+              <li><a href="{% url 'account_logout' %}" aria-label="Account logout page loads" class="dropdown-item">Logout</a></li>
               {% else %}
-              <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
-              <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+              <li><a href="{% url 'account_signup' %}" aria-label="Accoiunt register page loads" class="dropdown-item">Register</a></li>
+              <li><a href="{% url 'account_login' %}" aria-label="Account login page loads" class="dropdown-item">Login</a></li>
               {% endif %}
             </ul>
             <!-- Shopping Basket Button -->
-            <a href="{% url 'bag_view' %}" class="btn btn-sm btn-outline-success btn-style">
+            <a href="{% url 'bag_view' %}" aria-label="Shopping bag page loads" class="btn btn-sm btn-outline-success btn-style">
               <div class="text-center">
                 <div><i class="fa-solid fa-basket-shopping"></i></div>
                 <p class="my-0">
@@ -168,7 +170,6 @@
 
   <footer class="bottom mt-5">
     <h3 class="mt-2 mb-3 text-center">Stay in touch with Pedal Power</h3>
-    <!-- <hr class="hr-footer"> -->
     <div class="row ms-2 me-2">
       <div class="col-12 col-md-4">
         <h4 class="text-center">Social</h4>
@@ -219,10 +220,10 @@
                     <p style="margin: 0px auto;"><a href="http://eepurl.com/i5cTUA"
                         title="Mailchimp - email marketing made easy and fun"><span
                           style="display: inline-block;"><img
-                            class="refferal_badge"
-                            src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                            alt="Intuit Mailchimp"
-                            style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
+                          class="refferal_badge"
+                          src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                          alt="Intuit Mailchimp"
+                          style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
                     </p>
                   </div>
                 </div>
@@ -247,27 +248,6 @@
   </script>
   <!-- Mailchimp -->
   <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-  <!-- <script type="text/javascript">
-  (function ($) {
-      window.fnames = new Array();
-      window.ftypes = new Array();
-      fnames[0] = 'EMAIL';
-      ftypes[0] = 'email';
-      fnames[1] = 'FNAME';
-      ftypes[1] = 'text';
-      fnames[2] = 'LNAME';
-      ftypes[2] = 'text';
-      fnames[3] = 'ADDRESS';
-      ftypes[3] = 'address';
-      fnames[4] = 'PHONE';
-      ftypes[4] = 'phone';
-      fnames[5] = 'BIRTHDAY';
-      ftypes[5] = 'birthday';
-      fnames[6] = 'COMPANY';
-      ftypes[6] = 'text';
-    }(jQuery));
-    var $mcj = jQuery.noConflict(true);
-  </script> -->
 
   {% endblock %}
 
