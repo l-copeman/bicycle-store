@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--Meta tags for search engines-->
-  <meta name="description" content="Pedal Power, your go-to online bike store for high-quality road, mountain, and kids bikes. Explore eco-friendly cycling options and start your adventure." />
+  <meta name="description" content="Pedal Power, your go-to online bike store for high-quality road, mountain, and kids bikes. Explore eco-friendly cycling options and start your adventure.">
   <meta name="keywords" content="bikes, pedal, power, bicycle, cycle, road, mountain, kids, explore, adventure, eco-friendly, environment">
   <meta name="author" content="Lee Copeman">
   {% endblock %}
@@ -83,10 +83,10 @@
           <div class="dropdown d-inline">
             <button class="btn btn-sm btn-outline-success btn-style dropdown me-1" type="button" id="accountDropdown"
               data-bs-toggle="dropdown" aria-expanded="false">
-              <div><i class="fa-regular fa-user"></i></div>
-              {% if user.is_authenticated %}
+            <div><i class="fa-regular fa-user"></i></div>
+            {% if user.is_authenticated %}
               <p class="my-0">{{ user }}</p>
-              {% else %}
+            {% else %}
               <p class="my-0">Account</p>
               {% endif %}
             </button>
@@ -189,7 +189,7 @@
           </li>
         </ul>
         <h4 class="text-center">About</h4>
-        <p class="text-center">All about Pedal Power, <span class="text-white"><a href="{% url 'about' %}" class="text-white arrow-hv" class="">click here!</a></span></p>
+        <p class="text-center">All about Pedal Power, <span class="text-white"><a href="{% url 'about' %}" class="text-white arrow-hv">click here!</a></span></p>
       </div>
       <div class="col-12 col-md-8">
         <h4 class="text-center">Subscribe</h4>

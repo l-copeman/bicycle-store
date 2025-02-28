@@ -154,6 +154,9 @@ Usability was tested with the below user acceptance testing, sent to new users t
 
 ### Known Bugs
 
+- I have used a yellow border to highlight different elements throughout the project. Although the yellow border for the country dropdown box in the checkout form, wraps around the title aswell as the dropdown box, where it should only be bordering the dropdown box.
+- When editing a product, the current image does not show.
+
 ### Resolved Bugs
 
 - The shopping bag was adding the standard delivery cost to the total, even when there were no products in the shopping bag. So a total of £15 was shown, when users first enter the site. 
@@ -169,6 +172,79 @@ To resolve this a simple if statement was added, so the delivery cost is 0, if t
 ---
 
 ## Validation
+
+### HTML Validation:
+
+- [index.html Validation Report](documentation/validation/index-html.png)
+
+    - No errors or warnings were found when passing through the official [W3C](https://validator.w3.org/) validator. This checking was done manually by copying the view page source code and pasting it into the validator.
+
+- [recipe_feature.html Validation Report](documentation/validation/feature-html.png)
+
+    - No errors or warnings were found when passing through the official [W3C](https://validator.w3.org/) validator. This checking was done manually by copying the view page source code and pasting it into the validator.
+
+### CSS Validation:
+
+- [Full CSS Validation Report](documentation/validation/css.png)
+
+- No errors or warnings were found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri) validator. This checking was done manually by copying the view page source code and pasting it into the validator.
+
+### JS Validation:
+
+- [Full JS Validation Report](documentation/validation/js.png)
+
+- No errors or warning messages were found when passing through the official [JSHint](https://www.jshint.com/) validator. However, the variable "Stripe" was showing as undefined. This was taken from Stripe documentation.
+
+### Python Validation:
+
+- [About App Model](documentation/validation/about-model.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.
+- [About App URLS](documentation/validation/about.urls.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.    
+- [About App Views](documentation/validation/about-views.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.
+- [Bag App Views](documentation/validation/bag-view.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.   
+- [Bag App Contexts](documentation/validation/bag-context.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.    
+- [Bag App URLS](documentation/validation/bag-urls.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.
+- [About App Views](documentation/validation/about-views.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.    
+- [Checkout App Views](documentation/validation/check-views.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.             
+- [Checkout App Admin](documentation/validation/check-admin.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.                 
+- [Checkout App Forms](documentation/validation/check-form.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.    
+- [Checkout App Signals](documentation/validation/check-signals.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.                 
+- [Checkout App URLS](documentation/validation/check-urls.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.   
+- [Checkout App Models](documentation/validation/checkout-model.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator. 
+- [Checkout App Webhooks](documentation/validation/webhooks.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.  
+- [Checkout App Webhook Handler](documentation/validation/web-handler.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.       
+- [Product App Admin](documentation/validation/prod-admin.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.                
+- [Product App Form](documentation/validation/prod-admin.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.
+- [Product App Model](documentation/validation/prod-model.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.                               
+- [Product App URLS](documentation/validation/prod-urls.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.
+- [Product App Views](documentation/validation/prod-views.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.
+- [Profile App Views](documentation/validation/profile-views.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.
+- [Profile App URLS](documentation/validation/profile-urls.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.    
+- [Profile App Models](documentation/validation/profile-models.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator. 
+- [Profile App Forms](documentation/validation/profile-form.png)
+    - No errors were found when the code was passed through Code Institutes pep8 validator [pep8 validator](). The checking was done manually by copying python code and pasting it into the validator.             
 
 ---
 

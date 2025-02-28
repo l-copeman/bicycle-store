@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://pedal-power-store-be92afa30294.herokuapp.com/sitemap.xml
