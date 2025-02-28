@@ -116,3 +116,9 @@ Most businesses are on social media, so having an active presence helps to stay 
 
 9. Provides Valuable Insights & Analytics
 Platforms like Facebook and Instagram offer analytics on post engagement, audience demographics, and ad performance, helping businesses refine their strategies for better results.
+
+### Facebook Page
+
+![Facebook Page](documentation/design/Screenshot%202025-02-28%20at%2011.50.16%202.png)
+
+![Facebook Page](documentation/design/Screenshot%202025-02-28%20at%2011.50.27%202.png)

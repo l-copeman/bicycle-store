@@ -250,6 +250,50 @@ To resolve this a simple if statement was added, so the delivery cost is 0, if t
 
 ## Lighthouse Report
 
+### Home Page
+
+![Lighthouse Report. Home Page](documentation/lighthouse/home.png)
+
+### Product Page
+
+![Lighthouse Report. Product Page](documentation/lighthouse/products.png)
+
+### Product Detail Page
+
+![Lighthouse Report. Product Detail Page](documentation/lighthouse/product-detail.png)
+
+### Shopping Bag Page
+
+![Lighthouse Report. Shopping Bag Page](documentation/lighthouse/bag.png)
+
+### Checkout Page
+
+![Lighthouse Report. Checkout Page](documentation/lighthouse/checkout.png)
+
+### Checkout Success Page
+
+![Lighthouse Report. Checkout Success Page](documentation/lighthouse/check-success.png)
+
+### Profile Page
+
+![Lighthouse Report. Profile Page](documentation/lighthouse/profile.png)
+
+### About Page
+
+![Lighthouse Report. About Page](documentation/lighthouse/about.png)
+
+### Registration Page
+
+![Lighthouse Report. Registration Page](documentation/lighthouse/reg.png)
+
+### Login Page
+
+![Lighthouse Report. Login Page](documentation/lighthouse/login.png)
+
+### Logout Page
+
+![Lighthouse Report. Logout Page](documentation/lighthouse/logout.png)
+
 ---
 
 ## Responsiveness

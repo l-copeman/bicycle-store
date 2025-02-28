@@ -156,14 +156,11 @@ The main font used in the application is Rubik. The font-family was chosen due t
 
 ### Imagery
 
-The images used for the recipes were downloaded from the following sites:
+All images used throughout the site are from:
 
-- [Crepes Image link](https://pixabay.com/photos/pancakes-yummy-dessert-3926009/)
-- [Vegan Katsu Image link](https://www.pexels.com/search/katsu/)
-- [Cookie Image link](https://www.pexels.com/search/choc%20chip%20cookie/)
-- [Vegetarian Chilli Image link](https://unsplash.com/photos/a-bowl-of-food-VAbBclifmvY)
-- [Cheese Straw Image link](https://www.vecteezy.com/photo/47277296-cheese-sticks-with-herbs-on-a-white-surface)
-- [Spinach and Feta Quiche Image link](https://www.pexels.com/search/quiche/)
+- https://www.cleanpng.com/
+
+
 
 Images were converted to `webp` format with Convertio to reduce size and therefore increase load time to improve UX.
 
